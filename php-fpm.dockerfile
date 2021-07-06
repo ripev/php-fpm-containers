@@ -4,7 +4,7 @@ RUN apt-get update -y
 RUN apt-get -y install gcc make autoconf libc-dev pkg-config libzip-dev
 
 RUN apt-get install -y --no-install-recommends \
-    nodejs npm git imagemagick \
+    nodejs npm git imagemagick vim-tiny \
     libmemcached-dev \
     libz-dev \
     libpq-dev \
