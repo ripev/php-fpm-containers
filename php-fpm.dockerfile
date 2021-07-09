@@ -4,7 +4,7 @@ RUN apt-get update -y
 RUN apt-get -y install gcc make autoconf libc-dev pkg-config libzip-dev
 
 RUN apt-get install -y --no-install-recommends \
-    nodejs npm git imagemagick vim-tiny \
+    nodejs npm git \
     libmemcached-dev \
     libz-dev \
     libpq-dev \
@@ -62,7 +62,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 ADD ./php.ini /etc/php/7.3/fpm/conf.d/90-php.ini
 ADD ./php.ini /etc/php/7.3/cli/conf.d/90-php.ini
 
-RUN usermod -u 1000 www-data
+RUN usermod -u 10000 www-data
 
 WORKDIR "/var/www/html"
 
